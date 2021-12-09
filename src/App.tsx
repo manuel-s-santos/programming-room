@@ -1,9 +1,17 @@
 import React, {useState} from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isHidden, setIsHidden] =  useState(false);
+  
   return (
-    <div className="App">
+    <div>
+      <button onClick={() => {
+        setIsHidden(!isHidden);}}>
+        {isHidden ? 'Hide' : 'Show'}
+      </button>
+
+      {isHidden && <p>Lorem ipsum dolor </p>}
       
     </div>
   );
