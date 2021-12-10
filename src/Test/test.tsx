@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import classes from '../Test/test.module.css';
 
-const Test = (props) =>  {
+
+const Test = () =>  {
     const [count, setCount] = useState(0);
     return (
       <div className="Test">
-        {count}
+        <h3> {count} </h3><br/>
         <button className='pixel' onClick={() => setCount(count +1)}>Increment</button>
         <button className='pixel' onClick={() => setCount(count -1)}>Decrement</button>
       </div>

@@ -1,18 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 .App {
   text-align: center;
 }
 
-.default-button{
-  font-family:"MS Sans Serif";
-  font-size:13px;
-  outline:1px solid #000000;
-  background:#C0C0C0;
-  border-width:1px;
-  border-style:solid;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  padding:4px 10px;
-  margin:20px auto 3px;
-  display:block;
-  position:relative;
-  bottom:0px;
+.default-btn {
+	display: block;
+	position: relative;
+	width: 150px;
+	height: 50px;
+	color: white;
+	font-size: 15px;
+	text-transform: uppercase;
+	background-color: #ca6702;
+	border: none;
+	margin: 20px auto 50px auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+	outline: none;
+}
+
+.default-btn::after {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	top: 12px;
+	left: 0;
+	background-color: #bb3e03;
+	border-radius: 10px;
+	z-index: -1;
+}
+.default-btn:hover {
+	background-color: #ae2012;
+}
+.default-btn:active {
+	top: 10px;
+}
+.default-btn:active::after {
+	top: 2px;
+}
+h4{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
 }
