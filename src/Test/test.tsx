@@ -4,7 +4,7 @@ const Test = () =>  {
     const [count, setCount] = useState(0); //counter
     const increment = () => {
       setCount(count + 1);
-    }
+    };
   
     return (
       //<div className="Test">
