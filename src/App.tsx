@@ -15,6 +15,15 @@ const App = () => {
       
     </div>
   );
-}
+};
 
+const Test = () =>  {
+  const [count, setCount] = useState(0); //counter
+
+  return (
+    <div className="Test">
+      {count} <button onClick={() => setCount(count +1)}></button>
+    </div>
+  );
+};
 export default App;
