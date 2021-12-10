@@ -11,6 +11,6 @@ const Joke = () => {
 const App = () => {
   return <Joke/>
 }
-ReactDOM.render(<App />, document.getElementById('app'));
+
 
 export default Joke;

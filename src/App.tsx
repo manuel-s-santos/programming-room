@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Test from './Test/test';
 import Workout from './Workout/workout';
+import Joke from './Test/joke';
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
       } }>
         {isHidden ? 'Hide this' : 'Show this'}
       </button>
-      {isHidden && <h4>Lorem ipsum dolor </h4>}
+      {isHidden && <div> <h4> <Joke></Joke></h4></div>}
     </div>
     
     <React.Fragment>
