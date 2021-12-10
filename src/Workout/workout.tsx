@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React, {useState, useEffect} from "react";
-import classes from '../Workout/workout.module.css';
+
 
 const  Workout = () => {
     const [isHidden, setIsHidden] =  useState(false);
@@ -18,7 +18,3 @@ const  Workout = () => {
 };
 
 export default Workout;
-
-const Workout = styled.div`
-    text-align: center;
-`:
