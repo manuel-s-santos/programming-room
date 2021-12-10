@@ -8,7 +8,7 @@ const App = () => {
   
   return (
     <><div>
-      <button onClick={() => {
+      <button className='default-btn' onClick={() => {
         setIsHidden(!isHidden);
       } }>
         {isHidden ? 'Hide' : 'Show'}
