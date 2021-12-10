@@ -13,9 +13,9 @@ const App = () => {
       <button className='default-btn' onClick={() => {
         setIsHidden(!isHidden);
       } }>
-        {isHidden ? 'Hide this' : 'Show this'}
+        {isHidden ? 'Hide Joke' : 'Show Joke'}
       </button>
-      {isHidden && <div> <h4> <Joke></Joke></h4></div>}
+      {isHidden && <div className='joke-box'> <h4> <Joke></Joke></h4></div>}
     </div>
     
     <React.Fragment>
