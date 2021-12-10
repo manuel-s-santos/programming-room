@@ -12,7 +12,7 @@ const  Workout = () => {
       } }>
         {isHidden ? 'Hide Workout' : 'Workout Now'}
       </button>
-      {isHidden && <h4>Lorem ipsum dolor </h4>}  //insert app here
+      {isHidden && <h4> <Workout></Workout> </h4>}  
     </div>
         </>
     );
