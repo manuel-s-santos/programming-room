@@ -57,6 +57,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-image: url(./Images/4985365.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100vw 100vh;
+  
 }
 
 code {
