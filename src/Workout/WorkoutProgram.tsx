@@ -1,20 +1,13 @@
 import styled from 'styled-components';
 import React, {useState, useEffect} from "react";
-import WorkoutItem from './WorkoutGoal';
+import WorkoutGoal from './WorkoutGoal';
 
-const WorkoutProgram = (props: { items: any[]; onDeleteItem: any; }) => {
+const WorkoutProgram = props => {
     return (
-      <ul className="workout-prog">
-        {props.items.map((workout: { id: any; text: any; }) => (
-          <WorkoutItem
-            key={workout.id}
-            id={workout.id}
-            onDelete={props.onDeleteItem}
-          >
-            {workout.text}
-            </WorkoutItem>
-        ))}
-      </ul>
+        <div className='workout-program'>
+            <WorkoutGoal></WorkoutGoal>
+
+        </div>
     );
   };
   

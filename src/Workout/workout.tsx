@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React, {useState, useEffect} from "react";
+import WorkoutProgram from './WorkoutProgram';
+import WorkoutGoal from './WorkoutGoal';
 
 
 const  Workout = () => {
@@ -12,7 +14,7 @@ const  Workout = () => {
       } }>
         {isHidden ? 'Hide Workout' : 'Workout Now'}
       </button>
-      {isHidden && <h4> <Workout></Workout> </h4>}  
+      {isHidden && <h4> <WorkoutProgram></WorkoutProgram> </h4>}  
     </div>
         </>
     );
