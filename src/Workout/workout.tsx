@@ -14,7 +14,8 @@ const  Workout = () => {
       } }>
         {isHidden ? 'Hide Workout' : 'Workout Now'}
       </button>
-      {isHidden && <h4> <WorkoutProgram></WorkoutProgram> </h4>
+      {isHidden && <h4> <WorkoutProgram ></WorkoutProgram> </h4>
+      
     }  
     </div>
         </>
