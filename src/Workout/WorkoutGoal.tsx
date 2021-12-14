@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import WorkoutList from "./interface";
+import { WorkoutList } from "./interface";
       
 /*
 const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
