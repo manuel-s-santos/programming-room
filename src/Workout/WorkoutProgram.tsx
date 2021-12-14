@@ -1,7 +1,7 @@
 import React, {useState, ChangeEvent} from "react";
-// import WorkoutGoal from './WorkoutGoal';
+import WorkoutGoal from './WorkoutGoal';
 import  './workout.css';
-import WorkoutList from "./WorkoutList";
+import { WorkoutList } from "./interface";
 
 const WorkoutProgram = () => {
     const [goal, setGoal]=  useState<string> ("");
@@ -26,21 +26,29 @@ const WorkoutProgram = () => {
     };
         const completeGoal = (goalNameToDelete: string): void => {
             set workoutList(
-                workoutList.filter((task) => {
+                workoutList.filter((goal) => {
                     return goal.goalName != goalNameToDelete;
                 })
             );
-
         };
         
     return (
         <div className='workout-program'>
              <label><h3> Workout Program Checklist </h3></label>
              <div className="workout-container">
-             <input type="text" placeholder="Bench press" value={benchPress} onChange={handleChange} />
-             <input type="text" placeholder="Cable Row" value={cableRow} onChange={handleChange} />
-             <input type="text" placeholder="Assisted Chin Ups" value={chinUps} onChange={handleChange} />
+             <input type="text" placeholder="Bench press" value={goal} onChange={handleChange} />
+             <input type="text" placeholder="Cable Row" value={goal} onChange={handleChange} />
+             <input type="text" placeholder="Assisted Chin Ups" value={goal} onChange={handleChange} />
              </div>
+
+             <button onClick={addGoal}>Add New </button>
+
+            </div>
+            <div className="workoutList">
+                {workoutList.map ((goal: WorkoutList,key: number) => {
+                    return 
+                    <WorkoutGoal key={key} goal={goal} completeGoal={completeGoal} />;
+                })}
             </div>
     );
    };

@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import WorkoutList from "./WorkoutList";
+import WorkoutList from "./interface";
       
 /*
 const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
@@ -16,15 +16,26 @@ const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: 
         });
       };
 */
+interface Props {
+  goal: WorkoutList;
+  completeGoal(goalNameToDelete:string): void;
+}
 
-const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
-    const deleteHandler = () => {
-        props.onDelete(props.id);
-      };
-      return (
-        <li className="goal" onClick={deleteHandler}>
-          {props.children}
-        </li>
-      );
-                }
+const WorkoutGoal = ({ goal, completeGoal }: Props) => {
+  return (
+    <div className="goal">
+      <div className="content">
+        <span>{goal.goalName}</span>
+        <span>{goal.reps}</span>
+      </div>
+      <button
+        onClick={() => {
+          completeGoal(goal.goalName);
+        }}
+      >
+        ✓
+      </button>
+    </div>
+  );
+};
 export default WorkoutGoal;
