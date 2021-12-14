@@ -19,16 +19,20 @@
 .workout-container{ 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 500px;
 	flex-direction: column;
+	line-height: 6px;
 }
 
 .workout-container input {
-	width: 200px;
+	width: 350px;
 	height: 40px;
 	border: none;
 	font-family: 'Press Start 2P', cursive;
 	font-size: 12px;
-	line-height: 6px;
 	text-align: center;
+	align-items: center;
+	margin: 2px 20px 2px 20px;
+	border-radius: 6px;
 }
