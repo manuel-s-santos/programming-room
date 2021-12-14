@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import WorkoutList from "./WorkoutList";
       
+/*
 const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
     const [workoutGoal, setWorkoutGoal] = useState([
         {name: 'Bench press', id:'g1', sets: 3, reps: 10, weight: 20, notes: 'Explosive push up and slow drop down' },
@@ -14,5 +15,16 @@ const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: 
           return updatedGoals;
         });
       };
+*/
+
+const WorkoutGoal = (props: { onDelete: (arg0: any) => void; id: any; children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
+    const deleteHandler = () => {
+        props.onDelete(props.id);
+      };
+      return (
+        <li className="goal" onClick={deleteHandler}>
+          {props.children}
+        </li>
+      );
                 }
 export default WorkoutGoal;

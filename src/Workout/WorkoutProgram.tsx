@@ -6,8 +6,10 @@ const WorkoutProgram = () => {
     return (
         <div className='workout-program'>
              <label><h3> Workout Program Checklist </h3></label>
-             
+             <WorkoutGoal onDelete={function (arg0: any): void {
+                throw new Error("Function not implemented.");
+            } } id={undefined} children={undefined}></WorkoutGoal>
         </div>
     );
-   };  
+   };
 export default WorkoutProgram;
