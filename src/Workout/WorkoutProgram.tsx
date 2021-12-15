@@ -19,12 +19,14 @@ const WorkoutProgram = () => {
         }
         };
 
-    const addGoal = (): void => {
+  {/* 
+     const addGoal = (): void => {
         const newGoal = { goalName: goal, reps: reps };
         setWorkoutGoal([...workoutGoal, newGoal]);
         setGoal("");
         setReps(3);
     };
+*/}
         const completeGoal = (goalNameToDelete: string): void => {
             setWorkoutGoal(
                 workoutGoal.filter((goal) => {
@@ -32,7 +34,7 @@ const WorkoutProgram = () => {
                 })
             );
         };
-        
+
     return (
         <><div className='workout-program'>
             <label><h3> Workout Program Checklist </h3></label>
@@ -42,12 +44,12 @@ const WorkoutProgram = () => {
                 <input type="text" placeholder="Assisted Chin Ups" value={goal} onChange={handleChange} />
             </div>
 
-            <button onClick={addGoal}>Add New </button>
+            {/* <button onClick={addGoal}>Add New </button> */}
 
         </div><div className="workoutList">
                 {workoutGoal.map((goal: WorkoutList, key: number) => {
                     return;
-                    <WorkoutGoal key={key} goal={goal} completeGoal={completeGoal} />;
+                    // <WorkoutGoal key={key} goal={goal} completeGoal={completeGoal} />;
                 })}
             </div></>
     );
