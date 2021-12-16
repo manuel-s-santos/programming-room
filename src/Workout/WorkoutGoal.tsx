@@ -17,16 +17,16 @@ interface Props {
 const WorkoutGoal = ({ goal, completeGoal }: Props) => {
   return (
     <div className="goal">
-
-      <div className="content">
           
         <table>
+          <tbody>
         <td><span>{goal.goalName}</span></td>
         <td><span> {goal.sets}</span></td>
         <td><span> {goal.reps}</span> </td>
         <td><span> {goal.weight}</span> </td>
         <td><span> {goal.notes}</span> </td>
         <td><span><input type="checkbox" onClick={() => {completeGoal()}}></input></span></td>
+        </tbody>
         </table>
 
           {/* <button
@@ -36,7 +36,6 @@ const WorkoutGoal = ({ goal, completeGoal }: Props) => {
         {goal.completed? '✔︎': '❐'}
       </button> */}
 
-      </div>
     </div>
   );
 };
