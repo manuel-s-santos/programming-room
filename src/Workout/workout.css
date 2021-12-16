@@ -14,6 +14,7 @@
 	border-style: dashed;
 	border-width: 6px;
 	overflow-wrap: break-word;
+	font-size: 10px;
 }
 
 .workout-program h3 {
@@ -22,6 +23,12 @@
 	margin: 2px auto;
 }
 
+th {
+	padding: 20px;
+	font-size: 12px;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
 .workout-container{ 
 	display: flex;
 	justify-content: center;
@@ -31,11 +38,9 @@
 	margin: 2px 20px 2px 20px;
 	width: 550px;
 	height: 30px;
-	flex-direction: column;
 	line-height: 6px;
 	border: none;
 	font-family: 'Press Start 2P', cursive;
-	font-size: 10px;
 }
 
 .workout-btn {

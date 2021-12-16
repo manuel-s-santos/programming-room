@@ -17,26 +17,39 @@ interface Props {
 const WorkoutGoal = ({ goal, completeGoal }: Props) => {
   return (
     <div className="goal">
+
       <div className="content">
-        <span>{goal.goalName}</span>
-        <span> {goal.sets}</span>
-        <span> {goal.reps}</span>
-        <span> {goal.weight}</span>
-        <span> {goal.notes}</span>
-      </div>
+      <table> <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Sets:</th>
+        <th>Reps:</th>
+        <th>Weight:</th>
+        <th>Notes:</th>
+        <th>Completed?</th>
+        </tr>
+        </thead>
+        <tbody> <tr> 
+      
+        <td><span>{goal.goalName}</span></td>
+        <td><span> {goal.sets}</span></td>
+        <td><span> {goal.reps}</span></td>
+        <td><span> {goal.weight}</span></td>
+        <td><span> {goal.notes}</span></td>
       {/* <button
         onClick={() => {
-          completeGoal()
-        }}
+          completeGoal()}}
       >
         {goal.completed? '✔︎': '❐'}
-        
       </button> */}
       <input type="checkbox" onClick={() => {
           completeGoal()
         }}
       ></input>
-      
+            </tr>
+      </tbody>
+      </table>
+      </div>
     </div>
   );
 };
