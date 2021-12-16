@@ -42,7 +42,7 @@ const WorkoutProgram = () => {
         useEffect(()=> {
             const incompleteLength = workoutGoal.filter(goal => !goal.completed).length;
                 if (incompleteLength===0){
-                    alert('Congrats!')
+                    alert("✨Congrats! You've finished your workout!✨")
                 }
         },[workoutGoal] );
 
