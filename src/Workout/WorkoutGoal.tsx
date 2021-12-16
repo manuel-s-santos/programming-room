@@ -19,14 +19,16 @@ const WorkoutGoal = ({ goal, completeGoal }: Props) => {
     <div className="goal">
       <div className="content">
         <span>{goal.goalName}</span>
-        <span>{goal.reps}</span>
+        <span> {goal.sets}</span>
+        <span> {goal.reps}</span>
+        <span> {goal.weight}</span>
       </div>
       <button
         onClick={() => {
           completeGoal()
         }}
       >
-        {goal.completed? '✓': 'mark as complete'}
+        {goal.completed? 'COMPLETED': 'mark as complete'}
         
       </button>
     </div>
