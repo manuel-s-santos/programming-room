@@ -22,6 +22,7 @@ const WorkoutGoal = ({ goal, completeGoal }: Props) => {
         <span> {goal.sets}</span>
         <span> {goal.reps}</span>
         <span> {goal.weight}</span>
+        <span> {goal.weight}</span>
       </div>
       <button
         onClick={() => {

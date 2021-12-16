@@ -25,23 +25,13 @@ const WorkoutArray :WorkoutList[] =  [
     weight: 30,
     notes: 'The greater the weights, the easier the chin ups', 
     completed: false,
-
+}
 ];
 
 const WorkoutProgram = () => {
     const [goal, setGoal]=  useState<string> ("");
     const [reps, setReps] = useState<number>(3);
     const [workoutGoal, setWorkoutGoal] = useState<WorkoutList[]>(WorkoutArray);
-    // const [cableRow, setCableRow]=  useState<string> ("");
-    // const [chinUps, setChinUps]=  useState<string> ("");
-
-    // const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    //     if (event.target.name === "goal"){
-    //         setGoal(event.target.value)
-    //     } else {
-    //         setReps(Number(event.target.value));
-    //     }
-    //     };
 
         const completeGoal = (key:number): void => {
             setWorkoutGoal(
@@ -62,21 +52,14 @@ const WorkoutProgram = () => {
     return (
         <><div className='workout-program'>
             <label><h3> Workout Program Checklist </h3></label>
-            {/* <div className="workout-container">
-                <input type="text" placeholder="Bench press" value={goal} onChange={handleChange} />
-                <input type="text" placeholder="Cable Row" value={goal} onChange={handleChange} />
-                <input type="text" placeholder="Assisted Chin Ups" value={goal} onChange={handleChange} />
-    </div> */}
+            
     {workoutGoal.map((goal: WorkoutList, key: number) => 
                     <WorkoutGoal key={key} goal={goal} completeGoal={()=>
                         completeGoal(key)
                      } />
                 )}
         </div>
-        <div>
-            {/* {workoutGoal.filter(goal => !goal.completed).length===0?alert('Congrats!'):} */}
-            </div> 
-            </>
+        </>
     );
    };
 export default WorkoutProgram;
