@@ -19,36 +19,23 @@ const WorkoutGoal = ({ goal, completeGoal }: Props) => {
     <div className="goal">
 
       <div className="content">
-      <table> <thead>
-      <tr>
-        <th>Name:</th>
-        <th>Sets:</th>
-        <th>Reps:</th>
-        <th>Weight:</th>
-        <th>Notes:</th>
-        <th>Completed?</th>
-        </tr>
-        </thead>
-        <tbody> <tr> 
-      
+          
+        <table>
         <td><span>{goal.goalName}</span></td>
         <td><span> {goal.sets}</span></td>
-        <td><span> {goal.reps}</span></td>
-        <td><span> {goal.weight}</span></td>
-        <td><span> {goal.notes}</span></td>
-      {/* <button
+        <td><span> {goal.reps}</span> </td>
+        <td><span> {goal.weight}</span> </td>
+        <td><span> {goal.notes}</span> </td>
+        <td><span><input type="checkbox" onClick={() => {completeGoal()}}></input></span></td>
+        </table>
+
+          {/* <button
         onClick={() => {
           completeGoal()}}
       >
         {goal.completed? '✔︎': '❐'}
       </button> */}
-      <input type="checkbox" onClick={() => {
-          completeGoal()
-        }}
-      ></input>
-            </tr>
-      </tbody>
-      </table>
+
       </div>
     </div>
   );

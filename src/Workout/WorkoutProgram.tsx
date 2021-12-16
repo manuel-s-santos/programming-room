@@ -29,8 +29,6 @@ const WorkoutArray :WorkoutList[] =  [
 ];
 
 const WorkoutProgram = () => {
-    const [goal, setGoal]=  useState<string> ("");
-    const [reps, setReps] = useState<number>(3);
     const [workoutGoal, setWorkoutGoal] = useState<WorkoutList[]>(WorkoutArray);
 
         const completeGoal = (key:number): void => {
@@ -52,7 +50,16 @@ const WorkoutProgram = () => {
     return (
         <><div className='workout-program'>
             <label><h3> Workout Program Checklist </h3></label>
-            
+            <table><thead><tr>
+                <th>Name:</th>
+                <th>Sets:</th>
+                <th>Reps:</th>
+                <th>Weight:</th>
+                <th>Notes:</th>
+                <th>Completed?</th>
+                </tr>
+                </thead>
+                </table>
     {workoutGoal.map((goal: WorkoutList, key: number) => 
                     <WorkoutGoal key={key} goal={goal} completeGoal={()=>
                         completeGoal(key)
