@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import Test from './Test/test';
+// import Test from './Test/test';
 import Workout from './Workout/workout';
 import Joke from './Test/joke';
 
@@ -19,7 +19,7 @@ const App = () => {
     </div>
     
     <React.Fragment>
-        <Test></Test>
+        {/* <Test></Test> */}
         <Workout></Workout>
       </React.Fragment></>
   );

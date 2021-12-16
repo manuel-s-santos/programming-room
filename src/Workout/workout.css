@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 .workout-program{
-    width: 600px;
-	height: 250px;
+    width: 850px;
+	height: 350px;
 	align-items: center;
 	justify-content: center;
 	margin: 2px auto;
@@ -14,26 +14,68 @@
 	border-style: dashed;
 	border-width: 6px;
 	overflow-wrap: break-word;
+}
 
+.workout-program h3 {
+	font-size: 17px;
+	color: #ae2012;
+	margin: 2px auto;
 }
 
 .workout-container{ 
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 500px;
-	flex-direction: column;
-	line-height: 6px;
-}
-
-.workout-container input {
-	width: 350px;
-	height: 30px;
-	border: none;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 12px;
 	text-align: center;
 	align-items: center;
 	margin: 2px 20px 2px 20px;
-	border-radius: 6px;
+	width: 550px;
+	height: 30px;
+	flex-direction: column;
+	line-height: 6px;
+	border: none;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 10px;
+}
+
+.workout-btn {
+	display: block;
+	position: relative;
+	width: 150px;
+	height: 50px;
+	color: white;
+	font-size: 15px;
+	text-transform: uppercase;
+	line-height: 1.3rem;
+	background-color: #ca6702;
+	border: none;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-family: 'Press Start 2P', cursive;
+	outline: none;
+}
+
+.workout-btn::after {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	top: 12px;
+	left: 0;
+	background-color: #bb3e03;
+	border-radius: 10px;
+	z-index: -1;
+}
+.workout-btn:hover {
+	background-color: #ae2012;
+}
+.workout-btn:active {
+	top: 10px;
+}
+.workout-btn:active::after {
+	top: 2px;
 }

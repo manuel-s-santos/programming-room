@@ -22,16 +22,21 @@ const WorkoutGoal = ({ goal, completeGoal }: Props) => {
         <span> {goal.sets}</span>
         <span> {goal.reps}</span>
         <span> {goal.weight}</span>
-        <span> {goal.weight}</span>
+        <span> {goal.notes}</span>
       </div>
-      <button
+      {/* <button
         onClick={() => {
           completeGoal()
         }}
       >
-        {goal.completed? 'COMPLETED': 'mark as complete'}
+        {goal.completed? '✔︎': '❐'}
         
-      </button>
+      </button> */}
+      <input type="checkbox" onClick={() => {
+          completeGoal()
+        }}
+      ></input>
+      
     </div>
   );
 };
