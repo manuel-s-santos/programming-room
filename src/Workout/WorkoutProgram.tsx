@@ -6,23 +6,23 @@ import { WorkoutList } from "./interface";
 
 const WorkoutArray :WorkoutList[] =  [
     {goalName: 'Bench press',
-    sets: 3,
-    reps: 10,
-    weight: 20,
+    sets:  3,
+    reps:  10,
+    weight:  20,
     notes: 'Explosive push up and slow drop down' ,
     completed: false,
 
 },
 
     {goalName: 'Cable row',
-    sets: 3, reps: 10,
-    weight: 10,
+    sets:  3, reps:  10,
+    weight:  10,
     notes: '3 secs. up, 1 sec. hold, 3 secs. down', 
     completed: false,
 },
     {goalName: 'Assisted Chin ups',
-    sets: 3, reps: 10,
-    weight: 30,
+    sets:  3, reps:  10,
+    weight:  30,
     notes: 'The greater the weights, the easier the chin ups', 
     completed: false,
 }

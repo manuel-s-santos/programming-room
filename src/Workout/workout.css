@@ -27,29 +27,51 @@
 	display: inline;
 	justify-content: center;
 	margin: 0 auto;
-	padding: 5px 30px 5px 30px;
+	padding: 8px 30px 8px 30px;
 	font-size: 12px;
 	text-decoration: underline;
 	text-transform: uppercase;
+	background: #bb3e03;
+	color: #ffffff;
 }
 
-table{
+span {
+	padding-left: 0px 30px 0px 50px;
+	display: inline-block;
+	justify-content: center;
+	width: 110px;
+	line-height: 12px;
+	text-align: left;
+	margin-left: 10px;
+}
+
+
+.goal input {
+	width: 100px;
+	display: inline;
+	margin: 0px 50px 0px 50px; 
+	justify-content: center;
+	align-items: center;
+}
+.goal table{
+	align-items: flex-start;
 	border: solid;
 	border-color: #ca6702;
+	display: flex;
+	width: 820px;
+	margin: 0;
+}
+.goal td {
+	display:inline-table;
+	padding: 10px auto;
+	overflow: hidden;
 }
 
-td{
-	display: inline;
-	padding: 15px auto;
-}
 .workout-container{ 
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	text-align: center;
-	align-items: center;
 	margin: 2px 20px 2px 20px;
-	width: 550px;
+	width: 800px;
 	line-height: 6px;
 	border: none;
 	font-family: 'Press Start 2P', cursive;

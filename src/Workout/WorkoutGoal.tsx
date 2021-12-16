@@ -20,12 +20,13 @@ const WorkoutGoal = ({ goal, completeGoal }: Props) => {
           
         <table>
           <tbody>
+        <tr>
         <td><span>{goal.goalName}</span></td>
         <td><span> {goal.sets}</span></td>
         <td><span> {goal.reps}</span> </td>
         <td><span> {goal.weight}</span> </td>
         <td><span> {goal.notes}</span> </td>
-        <td><span><input type="checkbox" onClick={() => {completeGoal()}}></input></span></td>
+        <td><span><input type="checkbox" onClick={() => {completeGoal()}}></input></span></td></tr>
         </tbody>
         </table>
 
